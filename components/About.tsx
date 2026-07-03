@@ -1,0 +1,9 @@
+"use client";
+import { motion } from "motion/react";
+import { Logo } from "./Logo";
+import { SectionLabel } from "./SectionLabel";
+
+const values = [["Clean design", "Clarity earns attention."], ["Smart systems", "Every part has a job."], ["Fast delivery", "Momentum without shortcuts."], ["Reliable support", "Still here after launch."]];
+export function About() {
+  return <><section className="section why"><div className="cold-word" aria-hidden="true">COLD</div><div className="why-head"><SectionLabel>Why Cold</SectionLabel><h2>Built clean. Built fast.<br />Built to work.</h2><p>Cold Solutions keeps things simple: clear strategy, clean execution, and digital systems that actually help businesses operate better.</p></div><div className="values">{values.map(([title, copy], i) => <motion.article key={title} initial={{ opacity: 0, y: 35, filter: "blur(8px)" }} whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }} viewport={{ once: true }} transition={{ delay: i * .1 }}><span>0{i + 1}</span><h3>{title}</h3><p>{copy}</p></motion.article>)}</div></section><section className="section about" id="about"><div className="about-mark"><Logo /><span>Starting small.<br />Building big.</span></div><div className="about-copy"><SectionLabel>About the studio</SectionLabel><h2>Student-founded.<br />Builder-minded.</h2><p>Cold Solutions is a student-founded software and automation studio focused on building websites, GoHighLevel systems, automations, and custom digital tools for small businesses.</p><p>The mission is simple: build clean systems that help businesses look professional, capture leads, and reduce manual work.</p><div className="stats"><div><strong>6</strong><span>service areas</span></div><div><strong>3</strong><span>demo builds</span></div><div><strong>1</strong><span>mission</span></div><div><strong>100%</strong><span>builder energy</span></div></div></div></section></>;
+}
