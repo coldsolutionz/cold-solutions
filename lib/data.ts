@@ -8,10 +8,36 @@ export const services = [
 ];
 
 export const projects = [
-  { index: "01", title: "Tavren Portfolio", type: "Brand platform", description: "A responsive company portfolio shaped around confident storytelling and a polished, modern presence.", tags: ["Strategy", "Web", "Motion"], problem: "Scattered story", solution: "Clear digital narrative", outcome: "Stronger first impression" },
-  { index: "02", title: "Estate Lead System", type: "Growth system · Demo", description: "A property landing experience connected to a focused qualification and inquiry flow.", tags: ["Landing page", "CRM", "Automation"], problem: "Leads went cold", solution: "Instant capture & routing", outcome: "Faster conversations" },
-  { index: "03", title: "Clinic Booking System", type: "Operations · Demo", description: "An appointment-first experience with a calm service journey, reminders, and simpler bookings.", tags: ["UX", "Booking", "Notifications"], problem: "Booking friction", solution: "Guided appointment flow", outcome: "Less admin work" },
+  {
+    index: "01", slug: "on5", title: "On5 Solutions", type: "Digital agency platform", url: "https://on5.framer.website",
+    description: "A broad service platform that turns a complex mix of managed IT, cybersecurity, software, and digital design into one approachable story.",
+    tags: ["Web design", "Motion", "Service architecture"], problem: "A multidisciplinary offer needed a single, coherent front door.", solution: "A conversion-led narrative with kinetic messaging, clear service pathways, proof, and repeated discovery-call moments.", outcome: "A confident agency presence built to make technical capability easy to understand.",
+    hero: "/work/on5-hero.jpg", detail: "/work/on5-detail.jpg",
+    challenge: "On5 spans managed infrastructure, custom software, cybersecurity, web development, and creative delivery. The experience had to communicate range without reading like a catalogue.",
+    approach: "The site leads with an adaptable promise, then moves from business benefits into service depth, selected work, social proof, FAQs, and a focused call to action. Persistent navigation keeps the long-form journey usable.",
+    features: ["Animated rotating hero proposition", "Benefit-led service architecture", "Project portfolio with category filters", "Client proof and testimonial sequence", "Responsive long-form conversion journey", "Repeated discovery-call pathways"],
+  },
+  {
+    index: "02", slug: "nopto", title: "Nopto", type: "AI automation agency", url: "https://nopto.framer.ai",
+    description: "A dark, high-contrast agency experience that makes AI agents and workflow automation feel tangible, structured, and ready for business.",
+    tags: ["AI positioning", "Web design", "Interaction"], problem: "An abstract AI service needed to feel concrete and commercially useful.", solution: "Product-like visual systems, workflow explanations, capability modules, and a clear discover–build–deliver journey.", outcome: "A focused digital presence that translates automation into understandable business value.",
+    hero: "/work/nopto-hero.jpg", detail: "/work/nopto-detail.jpg",
+    challenge: "AI automation can quickly become vague or over-technical. Nopto needed to establish a distinctive point of view while showing business owners what the engagement actually includes.",
+    approach: "The experience pairs a restrained black-and-violet visual system with operational examples: automations, live intelligence, custom agents, integrations, onboarding, deployment, and support.",
+    features: ["Cinematic AI-agent hero", "Interactive capability ecosystem", "Workflow and automation demonstrations", "Discover–build–deliver onboarding", "Custom-agent service storytelling", "Appointment-focused conversion flow"],
+  },
+  {
+    index: "03", slug: "tavren", title: "Tavren Control Desk", type: "Secure portfolio dashboard", url: "https://portfolio.tavren.io",
+    description: "A deliberately minimal, access-controlled entry point for Tavren’s private portfolio dashboard.",
+    tags: ["Authentication", "Dashboard", "Brand UI"], problem: "Private portfolio material required a controlled, professional access point.", solution: "A focused split-screen sign-in experience with unmistakable brand ownership and zero navigational distraction.", outcome: "A clear, secure-feeling threshold into a private client environment.",
+    hero: "/work/tavren-hero.jpg", detail: "/work/tavren-detail.jpg",
+    challenge: "The public surface must establish trust and orientation without exposing protected portfolio content or overwhelming the authentication task.",
+    approach: "The interface reduces the page to identity, credentials, and one action. Strong scale contrast and a deep green brand field make the utilitarian login feel owned rather than generic.",
+    features: ["Access-controlled portfolio entry", "Focused username/password workflow", "Strong split-screen composition", "Distinct Tavren brand treatment", "Responsive single-task interface", "Protected content boundary"],
+  },
 ];
+
+export type Project = (typeof projects)[number];
 
 export const processSteps = [
   ["01", "Discover", "We understand your offer, audience, and current workflow."],
