@@ -19,7 +19,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   const project = projects.find((item) => item.slug === slug);
   if (!project) notFound();
 
-  return <main className="case-study">
+  return <main className="case-study" id="main-content">
     <nav className="case-nav"><Link href="/" aria-label="Cold Solutions home"><Logo /></Link><Link href="/#work">All work</Link><a href={project.url} target="_blank" rel="noreferrer">Visit live site ↗</a></nav>
     <header className="case-hero"><div className="case-count">Project / {project.index}</div><h1>{project.title}</h1><div className="case-intro"><p>{project.description}</p><div>{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></div></header>
     <figure className="case-image case-image--hero"><Image src={project.hero} alt={`${project.title} homepage after the interface fully loaded`} fill priority sizes="100vw" /></figure>

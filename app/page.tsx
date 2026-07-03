@@ -11,5 +11,5 @@ import { SystemFlow } from "@/components/SystemFlow";
 import { Work } from "@/components/Work";
 
 export default function Home() {
-  return <SiteShell><Navbar /><main><Hero /><Marquee /><Services /><Work /><SystemFlow /><Process /><About /><CTA /></main><Footer /></SiteShell>;
+  return <SiteShell><Navbar /><main id="main-content"><Hero /><Marquee /><Services /><Work /><SystemFlow /><Process /><About /><CTA /></main><Footer /></SiteShell>;
 }
