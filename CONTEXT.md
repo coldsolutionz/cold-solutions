@@ -43,5 +43,5 @@ All items in `Improvement.md` were implemented: persistent context workflow, glo
 - Next.js production build: passed with all eight static routes generated.
 - Dependency audit: zero vulnerabilities.
 - Implementation commit: `1df0a6f`.
-- Deployment target: `https://coldsolutionz.vercel.app`.
-- No known blocker remains.
+- Git integration deployed the changes successfully to `https://cold-solutions.vercel.app`; the live HTML contains the new Gmail address.
+- Requested alias `https://coldsolutionz.vercel.app` is pending because the local Vercel CLI session expired (`Not authorized`). Re-authenticate the Cold Solutions account, then assign the alias to the existing `cold-solutions` project.
