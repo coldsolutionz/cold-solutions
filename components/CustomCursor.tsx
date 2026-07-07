@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import { Logo } from "./Logo";
 
 export function CustomCursor() {
   const cursor = useRef<HTMLDivElement>(null);
@@ -11,7 +12,7 @@ export function CustomCursor() {
       cancelAnimationFrame(frame);
       frame = requestAnimationFrame(() => {
         if (!cursor.current) return;
-        cursor.current.style.transform = `translate3d(${event.clientX - 8}px, ${event.clientY - 8}px, 0)`;
+        cursor.current.style.transform = `translate3d(${event.clientX - 12}px, ${event.clientY - 12}px, 0)`;
         cursor.current.classList.add("custom-cursor--visible");
         cursor.current.classList.toggle("custom-cursor--active", Boolean((event.target as Element)?.closest("a, button")));
       });
@@ -19,5 +20,5 @@ export function CustomCursor() {
     addEventListener("pointermove", move, { passive: true });
     return () => { cancelAnimationFrame(frame); removeEventListener("pointermove", move); };
   }, []);
-  return <div ref={cursor} className="custom-cursor" aria-hidden="true" />;
+  return <div ref={cursor} className="custom-cursor" aria-hidden="true"><Logo /></div>;
 }

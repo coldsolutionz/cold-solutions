@@ -26,5 +26,5 @@ export function Process() {
     });
     return () => { active = false; ctx?.revert(); };
   }, [reduced]);
-  return <section className="process" id="process" ref={root}><div className="process-title"><SectionLabel>How Cold builds</SectionLabel><h2>From first idea<br />to working system.</h2></div><div className="process-track" ref={track}>{processSteps.map(([num, title, copy]) => <article key={num}><span>{num}</span><div className="process-glyph">✦</div><h3>{title}</h3><p>{copy}</p></article>)}</div></section>;
+  return <section className="process" id="process" ref={root}><div className="process-title"><SectionLabel>How Cold builds</SectionLabel><h2>From first idea<br />to working system.</h2></div><div className="process-track" ref={track}>{processSteps.map(([num, title, copy]) => <article key={num}><span>{num}</span><div className="process-step-copy"><h3>{title}</h3><p>{copy}</p></div></article>)}</div></section>;
 }
