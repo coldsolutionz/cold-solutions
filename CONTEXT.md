@@ -13,7 +13,7 @@ Cold Solutions is a cinematic agency website for web development, GoHighLevel, a
 - Section labels may remain, but must not use neon dots or glow effects.
 - Decorative icons should not be introduced; company/logo marks are allowed.
 - Contact email: `hello.coldsolutions@gmail.com`.
-- Canonical production URL: `https://coldsolutionz.vercel.app`.
+- Preferred canonical production URL: `https://coldsolutions.vercel.app`.
 
 ## Architecture
 
@@ -33,7 +33,7 @@ Cold Solutions is a cinematic agency website for web development, GoHighLevel, a
 
 ## Current Request
 
-All items in `Improvement.md` were implemented: persistent context workflow, glow-free labels, snowflake cursor, Gmail/canonical URL updates, decorative icon removal, and a refined masked process timeline.
+Change the production URL to `coldsolutions.vercel.app`, or evaluate `cold.solutions` / `coldsolutions.io` if either can be obtained free.
 
 ## Last Verified State
 
@@ -45,3 +45,4 @@ All items in `Improvement.md` were implemented: persistent context workflow, glo
 - Implementation commit: `1df0a6f`.
 - Git integration deployed the changes successfully to `https://cold-solutions.vercel.app`; the live HTML contains the new Gmail address.
 - Requested alias `https://coldsolutionz.vercel.app` is pending because the local Vercel CLI session expired (`Not authorized`). Re-authenticate the Cold Solutions account, then assign the alias to the existing `cold-solutions` project.
+- Domain check on 2026-07-07: `coldsolutions.vercel.app` returns Vercel `DEPLOYMENT_NOT_FOUND` and is the preferred free alias; `cold.solutions` is registered and parked through Afternic; `coldsolutions.io` has no registration/DNS response but registration would still be paid. Vercel CLI remains unauthorized, so alias assignment is pending authentication.
